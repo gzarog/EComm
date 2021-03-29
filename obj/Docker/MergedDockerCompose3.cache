@@ -1,0 +1,58 @@
+services:
+  ecomm.api.customers:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Customers/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapicustomers
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  ecomm.api.orders:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Orders/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapiorders
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  ecomm.api.products:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Products/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapiproducts
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  ecomm.api.search:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: Ecomm.Api.Search/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapisearch
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

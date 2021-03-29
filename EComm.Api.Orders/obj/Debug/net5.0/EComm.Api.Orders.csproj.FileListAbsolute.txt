@@ -11,7 +11,6 @@ C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Microsoft.OpenApi.
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\DotnetCoreProjects\EComm\EComm.Api.Orders\obj\Debug\net5.0\EComm.Api.Orders.csprojAssemblyReference.cache
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\obj\Debug\net5.0\EComm.Api.Orders.GeneratedMSBuildEditorConfig.editorconfig
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\obj\Debug\net5.0\EComm.Api.Orders.AssemblyInfoInputs.cache
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\obj\Debug\net5.0\EComm.Api.Orders.AssemblyInfo.cs
@@ -34,3 +33,4 @@ C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Microsoft.EntityFr
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\DotnetCoreProjects\EComm\EComm.Api.Orders\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\DotnetCoreProjects\EComm\EComm.Api.Orders\obj\Debug\net5.0\EComm.Api.Orders.csprojAssemblyReference.cache

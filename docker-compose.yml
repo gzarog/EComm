@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  ecomm.api.customers:
+    image: ${DOCKER_REGISTRY-}ecommapicustomers
+    build:
+      context: .
+      dockerfile: EComm.Api.Customers/Dockerfile
+
+  ecomm.api.orders:
+    image: ${DOCKER_REGISTRY-}ecommapiorders
+    build:
+      context: .
+      dockerfile: EComm.Api.Orders/Dockerfile
+
+
+  ecomm.api.products:
+    image: ${DOCKER_REGISTRY-}ecommapiproducts
+    build:
+      context: .
+      dockerfile: EComm.Api.Products/Dockerfile
+
+
+  ecomm.api.search:
+    image: ${DOCKER_REGISTRY-}ecommapisearch
+    build:
+      context: .
+      dockerfile: Ecomm.Api.Search/Dockerfile
+

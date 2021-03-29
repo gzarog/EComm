@@ -1,0 +1,165 @@
+services:
+  ecomm.api.customers:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Customers/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: EComm.Api.Customers
+      target: base
+    container_name: EComm.Api.Customers
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages;/root/.nuget/fallbackpackages2
+    image: ecommapicustomers:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages --additionalProbingPath
+        /root/.nuget/fallbackpackages2  "/app/bin/Debug/net5.0/EComm.Api.Customers.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6002
+      target: 80
+    - published: 8002
+      target: 443
+    tty: true
+    volumes:
+    - C:\DotnetCoreProjects\EComm\EComm.Api.Customers:/app:rw
+    - C:\Users\zage\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages2:ro
+    - C:\Users\zage\.nuget\packages:/root/.nuget/packages:ro
+    - C:\DotnetCoreProjects\EComm:/src:rw
+  ecomm.api.orders:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Orders/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: EComm.Api.Orders
+      target: base
+    container_name: EComm.Api.Orders
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages;/root/.nuget/fallbackpackages2
+    image: ecommapiorders:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages --additionalProbingPath
+        /root/.nuget/fallbackpackages2  "/app/bin/Debug/net5.0/EComm.Api.Orders.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6003
+      target: 80
+    - published: 8003
+      target: 443
+    tty: true
+    volumes:
+    - C:\DotnetCoreProjects\EComm\EComm.Api.Orders:/app:rw
+    - C:\Users\zage\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages2:ro
+    - C:\Users\zage\.nuget\packages:/root/.nuget/packages:ro
+    - C:\DotnetCoreProjects\EComm:/src:rw
+  ecomm.api.products:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Products/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: EComm.Api.Products
+      target: base
+    container_name: EComm.Api.Products
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages;/root/.nuget/fallbackpackages2
+    image: ecommapiproducts:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages --additionalProbingPath
+        /root/.nuget/fallbackpackages2  "/app/bin/Debug/net5.0/EComm.Api.Products.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6001
+      target: 80
+    - published: 8001
+      target: 443
+    tty: true
+    volumes:
+    - C:\DotnetCoreProjects\EComm\EComm.Api.Products:/app:rw
+    - C:\Users\zage\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages2:ro
+    - C:\Users\zage\.nuget\packages:/root/.nuget/packages:ro
+    - C:\DotnetCoreProjects\EComm:/src:rw
+  ecomm.api.search:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: Ecomm.Api.Search/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Ecomm.Api.Search
+      target: base
+    container_name: Ecomm.Api.Search
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages;/root/.nuget/fallbackpackages2
+      Services__Customers: http://localhost:6002
+      Services__Orders: http://localhost:6003
+      Services__Products: http://localhost:6001
+    image: ecommapisearch:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages --additionalProbingPath
+        /root/.nuget/fallbackpackages2  "/app/bin/Debug/net5.0/Ecomm.Api.Search.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6004
+      target: 80
+    - published: 8004
+      target: 443
+    tty: true
+    volumes:
+    - C:\DotnetCoreProjects\EComm\Ecomm.Api.Search:/app:rw
+    - C:\Users\zage\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages2:ro
+    - C:\Users\zage\.nuget\packages:/root/.nuget/packages:ro
+    - C:\DotnetCoreProjects\EComm:/src:rw
+version: '3.4'

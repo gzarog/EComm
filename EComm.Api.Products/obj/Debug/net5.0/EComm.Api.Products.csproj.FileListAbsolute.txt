@@ -33,3 +33,4 @@ C:\DotnetCoreProjects\EComm\EComm.Api.Products\obj\Debug\net5.0\EComm.Api.Produc
 C:\DotnetCoreProjects\EComm\EComm.Api.Products\obj\Debug\net5.0\ref\EComm.Api.Products.dll
 C:\DotnetCoreProjects\EComm\EComm.Api.Products\obj\Debug\net5.0\EComm.Api.Products.pdb
 C:\DotnetCoreProjects\EComm\EComm.Api.Products\obj\Debug\net5.0\EComm.Api.Products.genruntimeconfig.cache
+C:\DotnetCoreProjects\EComm\EComm.Api.Products\obj\Debug\net5.0\EComm.Api.Products.csprojAssemblyReference.cache

@@ -1,0 +1,69 @@
+services:
+  ecomm.api.customers:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Customers/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapicustomers
+    ports:
+    - published: 6002
+      target: 80
+    - published: 8002
+      target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  ecomm.api.orders:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Orders/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapiorders
+    ports:
+    - published: 6003
+      target: 80
+    - published: 8003
+      target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  ecomm.api.products:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: EComm.Api.Products/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: ecommapiproducts
+    ports:
+    - published: 6001
+      target: 80
+    - published: 8001
+      target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  ecomm.api.search:
+    build:
+      context: C:\DotnetCoreProjects\EComm
+      dockerfile: Ecomm.Api.Search/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      Services__Customers: https://localhost:8002
+      Services__Orders: https://localhost:8003
+      Services__Products: https://localhost:8001
+    image: ecommapisearch
+    ports:
+    - published: 6004
+      target: 80
+    - published: 8004
+      target: 443
+    volumes:
+    - C:\Users\zage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\zage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
