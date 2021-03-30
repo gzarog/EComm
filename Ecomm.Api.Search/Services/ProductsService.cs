@@ -1,6 +1,8 @@
 ﻿using Ecomm.Api.Search.Interfaces;
 using Ecomm.Api.Search.Models;
+using Ecomm.Api.Search.RefitInterfaces;
 using Microsoft.Extensions.Logging;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,17 +26,15 @@ namespace Ecomm.Api.Search.Services
         {
             try
             {
-                var client = httpClientFactory.CreateClient("ProductsService");
-                var response = await client.GetAsync($"/api/Products/");
+                var productsApi = RestService.For<IProductsApi>(httpClientFactory.CreateClient("ProductsService"));
+                var response = await productsApi.GetProductsAsync();
                 if (response.IsSuccessStatusCode)
                 {
-                    var content = await response.Content.ReadAsByteArrayAsync();
-                    var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-                    var result = JsonSerializer.Deserialize<IEnumerable<ProductModel>>(content, options );
-                    return (true, result, null);
+                   
+                    return (true, response.Content, null);
 
                 }
-                return (false, null, response.ReasonPhrase);
+                return (false, response.Content, response.ReasonPhrase);
             }
             catch (Exception ex)
             {
@@ -42,5 +42,7 @@ namespace Ecomm.Api.Search.Services
                 return (false, null, ex.Message);
             }
         }
+
+       
     }
 }

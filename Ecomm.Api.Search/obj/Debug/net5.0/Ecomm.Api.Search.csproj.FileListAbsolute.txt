@@ -30,3 +30,4 @@ C:\DotnetCoreProjects\EComm\Ecomm.Api.Search\obj\Debug\net5.0\Ecomm.Api.Search.g
 C:\DotnetCoreProjects\EComm\Ecomm.Api.Search\bin\Debug\net5.0\Microsoft.Extensions.Http.Polly.dll
 C:\DotnetCoreProjects\EComm\Ecomm.Api.Search\bin\Debug\net5.0\Polly.dll
 C:\DotnetCoreProjects\EComm\Ecomm.Api.Search\bin\Debug\net5.0\Polly.Extensions.Http.dll
+C:\DotnetCoreProjects\EComm\Ecomm.Api.Search\bin\Debug\net5.0\Refit.dll

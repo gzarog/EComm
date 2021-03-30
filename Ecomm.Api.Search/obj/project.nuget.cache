@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2zWHtk+xV0siNsJ6oNGItkCY0jseNOTvS2Q6Ds4v4a/Dh/D34Xz6kWx9qBf0CWDfQX8pID92kF9JGF/MgxxbWA==",
+  "dgSpecHash": "ri5ZZDWaAK4neA8B7rjATzwcbo8dH++ACwGyupd6xWizxuOOyszMXUaYZaOy5hS3PThGipkku/nLuI/g6tS7gg==",
   "success": true,
   "projectFilePath": "C:\\DotnetCoreProjects\\EComm\\Ecomm.Api.Search\\Ecomm.Api.Search.csproj",
   "expectedPackageFiles": [
@@ -17,10 +17,12 @@
     "C:\\Users\\zage\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
     "C:\\Users\\zage\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\zage\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
+    "C:\\Users\\zage\\.nuget\\packages\\refit\\6.0.38\\refit.6.0.38.nupkg.sha512",
     "C:\\Users\\zage\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\zage\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\zage\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\zage\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "C:\\Users\\zage\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\zage\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
